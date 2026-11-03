@@ -274,10 +274,22 @@
     });
 
     const dateInput = document.getElementById("interviewDate");
-    const today = new Date();
-    const todayStr = today.toISOString().split("T")[0];
-    dateInput.min = todayStr;
-    dateInput.value = todayStr;
+
+    function setMinDate() {
+      const today = new Date();
+      const year = today.getFullYear();
+      const month = String(today.getMonth() + 1).padStart(2, '0');
+      const day = String(today.getDate()).padStart(2, '0');
+      const todayStr = `${year}-${month}-${day}`;
+
+      dateInput.min = todayStr;
+      if (!dateInput.value || dateInput.value < todayStr) {
+        dateInput.value = todayStr;
+      }
+    }
+
+    setMinDate();
+    dateInput.addEventListener("focus", setMinDate);
 
     const slotBtns = document.querySelectorAll(".slot-btn");
     const selectedSlotInput = document.getElementById("selectedSlot");
