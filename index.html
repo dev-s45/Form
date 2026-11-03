@@ -3,16 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Trainer Job Application</title>
-  <!-- Favicon / Browser Tab Icon -->
-<!-- === FAVICON & PREVIEW IMAGE CODES === -->
-
-<!-- 1. Favicon (Browser Tab Icon) -->
-<!-- Iske liye aapke folder mein 'logon.png' file honi zaroori hai -->
-<link rel="icon" type="image/png" href="logo.png">
+  <title>AI Trainer Job Application & Interview Booking</title>
+ <link rel="icon" type="image/png" href="logo.png">
 <link rel="shortcut icon" type="image/png" href="logo.png">
 
-<!-- 2. Open Graph / Social Media Preview (WhatsApp/LinkedIn) -->
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="AI Trainer Job Application (Hindi)">
 <meta property="og:description" content="Minimum 10th Pass required. Apply to train AI models using your Hindi language skills. Hourly payout model.">
@@ -21,7 +16,7 @@
 
 <meta property="og:url" content="https://i.postimg.cc/YqrSTWYz/AI-Trainer-Hiring-Banner.png">
 
-<!-- === Twitter Card Preview === -->
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI Trainer Hiring (Hindi)">
 <meta name="twitter:description" content="Shape the future with AI. Hindi language trainers needed.">
@@ -29,15 +24,14 @@
 
 <meta name="twitter:image" content="https://i.postimg.cc/YqrSTWYz/AI-Trainer-Hiring-Banner.png">
 
-<!-- === END FAVICON & PREVIEW CODES === -->
-  <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
     :root {
       --primary: #4f46e5;
       --primary-hover: #4338ca;
       --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
-      --card-bg: rgba(255, 255, 255, 0.95);
+      --card-bg: rgba(255, 255, 255, 0.96);
       --text-dark: #0f172a;
       --text-muted: #64748b;
       --border-color: #cbd5e1;
@@ -45,12 +39,7 @@
       --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
 
     body {
       min-height: 100vh;
@@ -74,32 +63,16 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .header {
-      text-align: center;
-      margin-bottom: 24px;
-    }
+    .header { text-align: center; margin-bottom: 24px; }
+    .header h1 { font-size: 26px; font-weight: 700; color: var(--text-dark); }
+    .header p { color: var(--text-muted); font-size: 14px; margin-top: 6px; }
 
-    .header h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--text-dark);
-      letter-spacing: -0.5px;
-    }
-
-    .header p {
-      color: var(--text-muted);
-      font-size: 15px;
-      margin-top: 6px;
-    }
-
-    /* Collapsible Job Description */
     .jd-card {
       background: #f8fafc;
-      border: 1px solid #e2e8f0;
+      border: 1.5px solid #e2e8f0;
       border-radius: var(--radius);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       overflow: hidden;
-      transition: all 0.3s ease;
     }
 
     .jd-header {
@@ -115,186 +88,66 @@
       user-select: none;
     }
 
-    .jd-header span:first-child {
-      flex: 1;
-      font-size: 14px;
-      line-height: 1.4;
-    }
+    .jd-header span:first-child { flex: 1; font-size: 14px; line-height: 1.4; }
+    #jdIcon { white-space: nowrap; font-size: 13px; font-weight: 600; }
+    .jd-content { padding: 18px; display: none; font-size: 13px; color: #334155; line-height: 1.6; border-top: 1px solid #e2e8f0; }
+    .jd-content.open { display: block; }
+    .jd-tag { display: inline-block; background: #e0e7ff; color: var(--primary); padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; margin-right: 6px; }
+    .jd-content ul { margin-left: 18px; margin-top: 6px; }
 
-    #jdIcon {
-      white-space: nowrap;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .jd-header:hover {
-      background: #e0e7ff;
-    }
-
-    .jd-content {
-      padding: 20px;
-      display: none;
-      font-size: 14px;
-      color: #334155;
-      line-height: 1.6;
-    }
-
-    .jd-content.open {
-      display: block;
-    }
-
-    .jd-tag {
-      display: inline-block;
-      background: #e0e7ff;
-      color: var(--primary);
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .jd-content ul {
-      margin-left: 20px;
-      margin-top: 8px;
-    }
-
-    .jd-content li {
-      margin-bottom: 6px;
-    }
-
-    /* Form Layout */
     .section-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--primary);
-      margin: 24px 0 12px;
-      padding-bottom: 6px;
-      border-bottom: 2px solid #e2e8f0;
+      font-size: 15px; font-weight: 600; color: var(--primary);
+      margin: 22px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #e2e8f0;
     }
 
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .full-width {
-      grid-column: span 2;
-    }
-
-    label {
-      display: block;
-      font-size: 13px;
-      font-weight: 600;
-      color: #334155;
-      margin-bottom: 6px;
-    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .full-width { grid-column: span 2; }
+    label { display: block; font-size: 13px; font-weight: 600; color: #334155; margin-bottom: 6px; }
 
     input, select {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1.5px solid var(--border-color);
-      border-radius: 8px;
-      font-size: 14px;
-      outline: none;
-      transition: all 0.2s ease;
-      background: #ffffff;
+      width: 100%; padding: 11px 13px; border: 1.5px solid var(--border-color);
+      border-radius: 8px; font-size: 14px; outline: none; background: #ffffff;
+    }
+    input:focus, select:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1); }
+
+    .slot-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px; position: relative; }
+    .slot-btn {
+      padding: 10px 6px; text-align: center; border: 1.5px solid var(--border-color);
+      border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;
+      background: #ffffff; color: var(--text-dark); transition: all 0.2s ease;
+    }
+    .slot-btn:hover:not(.disabled) { border-color: var(--primary); background: #eef2ff; }
+    .slot-btn.selected { background: var(--primary); color: #ffffff; border-color: var(--primary); }
+    .slot-btn.disabled { background: #f1f5f9; color: #94a3b8; border-color: #e2e8f0; cursor: not-allowed; text-decoration: line-through; }
+
+    .slot-loading {
+      grid-column: span 3; text-align: center; padding: 12px; font-size: 13px; color: var(--primary); font-weight: 500; background: #eef2ff; border-radius: 8px; display: none;
     }
 
-    input:focus, select:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
-    }
+    .checkbox-group { display: flex; align-items: flex-start; gap: 10px; margin-top: 10px; font-size: 13px; color: #334155; cursor: pointer; }
+    .checkbox-group input { width: auto; margin-top: 3px; cursor: pointer; }
 
-    .checkbox-group {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-top: 12px;
-      font-size: 13px;
-      color: #334155;
-      cursor: pointer;
-    }
+    .signature-input { text-transform: uppercase; font-weight: bold; letter-spacing: 1px; }
 
-    .checkbox-group input {
-      width: auto;
-      margin-top: 3px;
-      cursor: pointer;
-    }
-
-    /* Signature Input Styling */
-    .signature-input {
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .signature-hint {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    /* Submit Button & Status */
     button[type="submit"] {
-      width: 100%;
-      margin-top: 28px;
-      padding: 14px;
-      border: 0;
-      border-radius: var(--radius);
-      background: var(--primary);
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-      transition: all 0.2s ease;
+      width: 100%; margin-top: 26px; padding: 14px; border: 0;
+      border-radius: var(--radius); background: var(--primary); color: white;
+      font-size: 16px; font-weight: 600; cursor: pointer;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3); transition: all 0.2s ease;
     }
+    button[type="submit"]:hover { background: var(--primary-hover); }
+    button[type="submit"]:disabled { opacity: 0.6; cursor: not-allowed; }
 
-    button[type="submit"]:hover {
-      background: var(--primary-hover);
-      transform: translateY(-1px);
-    }
-
-    button[type="submit"]:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    #status {
-      margin-top: 16px;
-      font-size: 14px;
-      text-align: center;
-      font-weight: 500;
-      padding: 10px;
-      border-radius: 8px;
-      display: none;
-    }
-
-    #status.success {
-      display: block;
-      background: #dcfce7;
-      color: #15803d;
-    }
-
-    #status.error {
-      display: block;
-      background: #fee2e2;
-      color: #b91c1c;
-    }
+    #status { margin-top: 16px; font-size: 14px; text-align: center; font-weight: 500; padding: 12px; border-radius: 8px; display: none; line-height: 1.5; }
+    #status.success { display: block; background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+    #status.error { display: block; background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
 
     @media (max-width: 640px) {
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-      .full-width {
-        grid-column: span 1;
-      }
-      .container {
-        padding: 24px 20px;
-      }
+      .form-grid { grid-template-columns: 1fr; }
+      .full-width { grid-column: span 1; }
+      .slot-container { grid-template-columns: 1fr; }
+      .slot-loading { grid-column: span 1; }
+      .container { padding: 24px 16px; }
     }
   </style>
 </head>
@@ -302,65 +155,55 @@
 
   <main class="container">
     <header class="header">
-      <h1>AI Trainer Application Form</h1>
-      <p>Please review the job details below and submit your application.</p>
+      <h1>AI Trainer Job Application</h1>
+      <p>Secure Application & Google Meet Interview Booking</p>
     </header>
 
-    <!-- Collapsible Job Description -->
     <section class="jd-card">
       <div class="jd-header" id="jdToggle">
         <span>📌 Job Description: AI Data Trainer (Hindi)</span>
-        <span id="jdIcon">▼ Click to Expand</span>
+        <span id="jdIcon">▼ Expand</span>
       </div>
       <div class="jd-content" id="jdContent">
         <span class="jd-tag">Remote Work</span>
         <span class="jd-tag">Hourly Payout</span>
-        <p>We are looking for dedicated individuals to train and evaluate AI speech and text models in Hindi.</p>
-        <br>
-        <strong>Key Responsibilities & Qualifications:</strong>
+        <p>Train, evaluate, and fine-tune AI speech & text models in Hindi.</p>
         <ul>
-          <li><strong>Role:</strong> AI Speech & Text Trainer (Hindi).</li>
-          <li><strong>Language Skill:</strong> Excellent Hindi speaking, reading, and listening comprehension.</li>
-          <li><strong>Qualification:</strong> Minimum 10th Pass (High School).</li>
-          <li><strong>Payout:</strong> Hourly-based remuneration (Paid based on verified active hours).</li>
-          <li><strong>Requirements:</strong> Clear speech clarity, good internet connection, and basic smartphone/PC handling.</li>
+          <li><strong>Role:</strong> AI Speech & Text Trainer (Hindi)</li>
+          <li><strong>Qualification:</strong> Minimum 10th Pass & Good Communication</li>
+          <li><strong>Requirements:</strong> Stable Internet & Quiet Environment</li>
         </ul>
       </div>
     </section>
 
-    <!-- Main Application Form -->
-    <form id="contactForm" autocomplete="on">
+    <form id="contactForm">
       
-      <div class="section-title">Personal Details</div>
+      <div class="section-title">1. Personal Details</div>
       <div class="form-grid">
         <div>
           <label for="name">Full Name *</label>
-          <input id="name" name="name" required maxlength="100" placeholder="e.g. Rahul Sharma" autocomplete="name">
+          <input id="name" name="name" required maxlength="100" placeholder="e.g. Rahul Sharma">
         </div>
-
         <div>
           <label for="email">Email Address *</label>
-          <input id="email" name="email" type="email" required maxlength="150" placeholder="name@example.com" autocomplete="email">
+          <input id="email" name="email" type="email" required maxlength="150" placeholder="name@example.com">
         </div>
-
         <div>
           <label for="phone">Primary Phone Number *</label>
-          <input id="phone" name="phone" type="tel" required pattern="[6-9][0-9]{9}" title="Enter valid 10-digit Indian phone number" placeholder="10-digit Mobile Number" maxlength="10" autocomplete="tel">
+          <input id="phone" name="phone" type="tel" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number">
         </div>
-
         <div>
-          <label for="location">Current Location / City *</label>
+          <label for="location">Current City *</label>
           <input id="location" name="location" required maxlength="100" placeholder="e.g. Delhi, Mumbai">
         </div>
       </div>
 
-      <div class="section-title">Emergency / Alternative Contact</div>
+      <div class="section-title">2. Emergency Contact Details</div>
       <div class="form-grid">
         <div>
           <label for="altName">Contact Person Name *</label>
           <input id="altName" name="altName" required maxlength="100" placeholder="Relative / Friend Name">
         </div>
-
         <div>
           <label for="relation">Relation *</label>
           <select id="relation" name="relation" required>
@@ -374,117 +217,190 @@
             <option value="Other">Other</option>
           </select>
         </div>
-
         <div class="full-width">
           <label for="altPhone">Alternative Phone Number *</label>
-          <input id="altPhone" name="altPhone" type="tel" required pattern="[6-9][0-9]{9}" title="Enter valid 10-digit Indian phone number" placeholder="10-digit Emergency Contact Number" maxlength="10">
+          <input id="altPhone" name="altPhone" type="tel" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit emergency mobile number">
         </div>
       </div>
 
-      <div class="section-title">Eligibility & Declarations</div>
-      
+      <div class="section-title">3. Schedule 1-on-1 Google Meet Interview</div>
+      <div class="form-grid">
+        <div>
+          <label for="interviewDate">Select Date *</label>
+          <input type="date" id="interviewDate" name="interviewDate" required>
+        </div>
+        <div class="full-width">
+          <label>Available Slots (4:00 PM - 7:00 PM) *</label>
+          <div class="slot-container" id="slotContainer">
+            <div class="slot-loading" id="slotLoading">⏳ Loading available slots from server...</div>
+            <div class="slot-btn" data-time="16:00" data-hour="16">4:00 PM - 5:00 PM</div>
+            <div class="slot-btn" data-time="17:00" data-hour="17">5:00 PM - 6:00 PM</div>
+            <div class="slot-btn" data-time="18:00" data-hour="18">6:00 PM - 7:00 PM</div>
+          </div>
+          <input type="hidden" id="selectedSlot" name="selectedSlot" required>
+        </div>
+      </div>
+
+      <div class="section-title">4. Declarations & Digital Signature</div>
       <label class="checkbox-group">
         <input type="checkbox" id="workEligible" name="workEligible" required value="Yes">
-        <span>I confirm that I am eligible to work and have completed at least 10th grade qualification. *</span>
+        <span>I confirm that I am eligible to work and have completed at least 10th grade. *</span>
       </label>
-
       <label class="checkbox-group">
         <input type="checkbox" id="indiaResident" name="indiaResident" required value="Yes">
         <span>I confirm that I am a resident of India. *</span>
       </label>
 
-      <div class="section-title">Digital Signature Verification</div>
-      <div class="full-width">
-        <label for="signature">Digital Signature (Type Full Name in CAPITAL Letters) *</label>
+      <div class="full-width" style="margin-top: 14px;">
+        <label for="signature">Digital Signature (Full Name in CAPITAL Letters) *</label>
         <input id="signature" name="signature" class="signature-input" required maxlength="100" placeholder="RAHUL SHARMA">
-        <div class="signature-hint">Type your full name in ALL CAPS as a legal digital confirmation.</div>
       </div>
 
-      <button id="submitBtn" type="submit">Submit Application</button>
+      <button id="submitBtn" type="submit">Submit & Book Google Meet</button>
       <div id="status" role="status" aria-live="polite"></div>
 
     </form>
   </main>
 
   <script>
-    // Preserved Apps Script Web App URL
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzr-j-GvtNCXRGvQBur7WPZGsIrn6J-h3RC4aW4ifIspyjoTxm7u4aetrWvAYwo2HDkiA/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwl5wyX07lHqziQ8EsbM911a2Vpr_A3fZhZVguv32bMyj103X1EEar7xL7sJmprfCNAaw/exec";
 
-    // Toggle Job Description Section
     const jdToggle = document.getElementById("jdToggle");
     const jdContent = document.getElementById("jdContent");
     const jdIcon = document.getElementById("jdIcon");
-
     jdToggle.addEventListener("click", () => {
       jdContent.classList.toggle("open");
-      if (jdContent.classList.contains("open")) {
-        jdIcon.textContent = "▲ Click to Close";
-      } else {
-        jdIcon.textContent = "▼ Click to Expand";
-      }
+      jdIcon.textContent = jdContent.classList.contains("open") ? "▲ Close" : "▼ Expand";
     });
 
-    // Form submission & Validation Handling
+    const dateInput = document.getElementById("interviewDate");
+    const today = new Date();
+    const todayStr = today.toISOString().split("T")[0];
+    dateInput.min = todayStr;
+    dateInput.value = todayStr;
+
+    const slotBtns = document.querySelectorAll(".slot-btn");
+    const selectedSlotInput = document.getElementById("selectedSlot");
+    const slotLoading = document.getElementById("slotLoading");
+
+    slotBtns.forEach(btn => {
+      btn.addEventListener("click", function() {
+        if (this.classList.contains("disabled")) return;
+        slotBtns.forEach(b => b.classList.remove("selected"));
+        this.classList.add("selected");
+        selectedSlotInput.value = this.getAttribute("data-time");
+      });
+    });
+
+    const signatureInput = document.getElementById("signature");
+    signatureInput.addEventListener("input", function() { this.value = this.value.toUpperCase(); });
+
+    async function updateSlotAvailability() {
+      const selectedDate = dateInput.value;
+      if (!selectedDate) return;
+
+      selectedSlotInput.value = "";
+      slotBtns.forEach(b => {
+        b.classList.remove("selected");
+        b.classList.remove("disabled");
+        b.style.display = "none"; // Hide buttons during loading
+      });
+      slotLoading.style.display = "block"; // Show loading message
+
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      const currentMonth = String(now.getMonth() + 1).padStart(2, '0');
+      const currentDay = String(now.getDate()).padStart(2, '0');
+      const formattedToday = `${currentYear}-${currentMonth}-${currentDay}`;
+      
+      const isToday = (selectedDate === formattedToday);
+      const currentHour = now.getHours();
+
+      slotBtns.forEach(btn => {
+        const slotHour = parseInt(btn.getAttribute("data-hour"));
+        if (isToday && currentHour >= slotHour) {
+          btn.classList.add("disabled");
+        }
+      });
+
+      try {
+        if (SCRIPT_URL !== "YOUR_APPS_SCRIPT_WEB_APP_URL_HERE") {
+          const res = await fetch(`${SCRIPT_URL}?action=getSlots&date=${selectedDate}`);
+          const json = await res.json();
+          if (json.bookedSlots && json.bookedSlots.length > 0) {
+            json.bookedSlots.forEach(bookedTime => {
+              slotBtns.forEach(btn => {
+                if (btn.getAttribute("data-time") === bookedTime) {
+                  btn.classList.add("disabled");
+                }
+              });
+            });
+          }
+        }
+      } catch(e) {
+        console.warn("Could not fetch slots:", e);
+      } finally {
+        slotLoading.style.display = "none"; // Hide loading message
+        slotBtns.forEach(b => b.style.display = "block"); // Show slots again
+      }
+    }
+
+    dateInput.addEventListener("change", updateSlotAvailability);
+    updateSlotAvailability();
+
     const form = document.getElementById("contactForm");
     const button = document.getElementById("submitBtn");
     const status = document.getElementById("status");
-    const signatureInput = document.getElementById("signature");
-    const nameInput = document.getElementById("name");
-
-    // Force Capital Letters in Signature Input
-    signatureInput.addEventListener("input", function() {
-      this.value = this.value.toUpperCase();
-    });
-
-    // Simple Sanitizer against XSS
-    function sanitize(str) {
-      return str.replace(/[&<>"']/g, function(match) {
-        return {
-          '&': '&amp;',
-          '<': '&lt;',
-          '>': '&gt;',
-          '"': '&quot;',
-          "'": '&#39;'
-        }[match];
-      });
-    }
 
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
 
-      // Signature Matching Check
-      if (signatureInput.value.trim().toLowerCase() !== nameInput.value.trim().toLowerCase()) {
+      if (!selectedSlotInput.value) {
         status.className = "error";
-        status.textContent = "Signature must match your Full Name!";
+        status.textContent = "Please select an available interview time slot!";
         return;
       }
 
       button.disabled = true;
       status.className = "";
       status.style.display = "block";
-      status.textContent = "Submitting your application securely...";
+      status.textContent = "Verifying details & scheduling Google Meet session...";
 
       const data = new URLSearchParams();
-      
-      // Append sanitized data into URLSearchParams
       for (const [key, value] of new FormData(form).entries()) {
-        data.append(key, sanitize(value.toString().trim()));
+        data.append(key, value.toString().trim());
       }
 
       try {
-        await fetch(SCRIPT_URL, {
+        const response = await fetch(SCRIPT_URL, {
           method: "POST",
-          mode: "no-cors",
           body: data
         });
+        
+        const jsonResult = await response.json();
 
-        status.className = "success";
-        status.textContent = "Application submitted successfully!";
-        form.reset();
+        if (jsonResult.status === "Success") {
+          status.className = "success";
+          status.textContent = "Success! Your 1-on-1 session is booked. Check your email for the Google Meet link and instructions.";
+          form.reset();
+          updateSlotAvailability();
+        } else if (jsonResult.status === "DUPLICATE") {
+          status.className = "error";
+          status.textContent = "This Phone Number or Email is already registered. For further details, please reach out to admin.";
+          button.disabled = false;
+        } else if (jsonResult.status === "SLOT_TAKEN") {
+          status.className = "error";
+          status.textContent = "This slot was just booked by another candidate! Please choose a different slot.";
+          updateSlotAvailability();
+          button.disabled = false;
+        } else {
+          status.className = "error";
+          status.textContent = "Error: " + (jsonResult.message || "Unknown error occurred.");
+          button.disabled = false;
+        }
       } catch (error) {
         status.className = "error";
-        status.textContent = "Network error. Could not send application. Please try again.";
-      } finally {
+        status.textContent = "Network error. Please check your connection and try again.";
         button.disabled = false;
       }
     });
